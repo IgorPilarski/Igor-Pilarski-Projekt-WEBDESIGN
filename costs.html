@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Igor Pilarski Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbarScroll navbar-light shadow" id="navbar-stripe">
+    <div class="container">
+      <a class="navbar-brand" id="Igor-text" href="#"> Igor Pilarski</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/index.html">Home</a>  
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/costs.html">Costs</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="/contact.html">Contact</a>
+              </li>
+           </ul>
+        </div>
+    </div>
+  </nav>
+  <section id="costs">
+    <h1 class="text-center" id="costs-header"> Costs calculators</h1>
+    
+    <div class="calculators-container">
+      <div class="calculator">
+          <div class="input-container">
+              <label for="hours-rate-1">Hourly rate for website testing: 75 (PLN)</label>
+              <a type="text" id="hours-rate-1" value="75" readonly>
+          </div>
+  
+          <div class="input-container">
+              <label for="hours-worked-1">Number of hours:</label>
+              <input type="number" id="hours-worked-1" placeholder="Enter the number of hours:">
+          </div>
+  
+          <div class="input-container">
+              <label for="total-cost-1">Total cost:</label>
+              <input type="text" id="total-cost-1" readonly>
+          </div>
+  
+          <button class="button" onclick="calculateCost(75, 'hours-worked-1', 'total-cost-1')">Check</button>
+      </div>
+  
+      <div class="calculator">
+          <div class="input-container">
+              <label for="hours-rate-2">Hourly rate for creating automated tests: 100 (PLN)</label>
+              <a type="text" id="hours-rate-2" value="100" readonly>
+          </div>
+  
+          <div class="input-container">
+              <label for="hours-worked-2">Number of hours:</label>
+              <input type="number" id="hours-worked-2" placeholder="Enter the number of hours:">
+          </div>
+  
+          <div class="input-container">
+              <label for="total-cost-2">Total cost:</label>
+              <input type="text" id="total-cost-2" readonly>
+          </div>
+  
+          <button class="button" onclick="calculateCost(100, 'hours-worked-2', 'total-cost-2')">Check</button>
+      </div>
+  
+      <div class="calculator">
+          <div class="input-container">
+              <label for="hours-rate-3">Hourly rate for website development: 125(PLN)</label>
+              <a type="text" id="hours-rate-3" value="125" readonly>
+          </div>
+  
+          <div class="input-container">
+              <label for="hours-worked-3">Number of hours:</label>
+              <input type="number" id="hours-worked-3" placeholder="Enter the number of hours:">
+          </div>
+  
+          <div class="input-container">
+              <label for="total-cost-3">Total cost:</label>
+              <input type="text" id="total-cost-3" readonly>
+          </div>
+  
+          <button class="button" onclick="calculateCost(125, 'hours-worked-3', 'total-cost-3')">Check</button>
+      </div>
+    </div>
+    <div id="sum-of-costs-container">
+        <p><span id="sum-of-costs"></span></p>
+      </div>
+    </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"> </script>
+</body>
+</html>
